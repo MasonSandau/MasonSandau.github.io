@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="fixed-url">
+    <span id="base-url">mywebsite.com/</span>
+    <span id="dynamic-part"></span>
+  </div>
+
+  <div id="content">
+    <section id="aboutme" class="content-section" data-url="aboutme">
+      <div class="section-header">
+        <span class="completed-url">mywebsite.com/aboutme</span>
+      </div>
+      <div class="section-content">
+        <h1>About Me</h1>
+        <p>Hi, I'm a passionate programmer with skills in C++, Python, Java, and more...</p>
+      </div>
+    </section>
+
+    <section id="projects" class="content-section" data-url="projects">
+      <div class="section-header">
+        <span class="completed-url">mywebsite.com/projects</span>
+      </div>
+      <div class="section-content">
+        <h1>Projects</h1>
+        <ul>
+          <li>Space Weather Data Management System</li>
+          <li>Custom Kernel Driver</li>
+          <li>Flask Admin Panel</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section" data-url="contact">
+      <div class="section-header">
+        <span class="completed-url">mywebsite.com/contact</span>
+      </div>
+      <div class="section-content">
+        <h1>Contact</h1>
+        <p>Email: example@mywebsite.com</p>
+        <p>GitHub: github.com/username</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

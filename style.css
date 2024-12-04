@@ -80,8 +80,8 @@ body.dark-theme h1, body.dark-theme p {
 
 #sidebar {
   position: fixed;
-  left: 20px;
-  top: 250px; /* Adjust based on your design */
+  left: 0%;
+  top: 20%; /* Adjust based on your design */
   width: 200px; /* Fixed width for sidebar */
   background: rgba(0, 0, 0, 0); /* Semi-transparent background */
   padding: 15px;

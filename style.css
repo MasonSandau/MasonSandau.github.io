@@ -46,7 +46,7 @@ button.theme-toggle {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
   position: fixed;
-  top: 20px; /* Distance from the top of the screen */
+  bottom: 20px; /* Distance from the top of the screen */
   right: 20px; /* Distance from the right of the screen */
 }
 
@@ -189,4 +189,37 @@ body.dark-theme h1, body.dark-theme p {
 
 .fade-in.scrolled {
   opacity: 1; /* Fade in effect */
+}
+
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.social-icons {
+    position: fixed; /* Fixed positioning to keep it in the same place */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: #fff; /* Background color of the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px; /* Padding inside the box */
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 10px; /* Space between icons */
+    right: 5%;
+    top: 5%;
+}
+
+.icon {
+    color: #333; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.icon:hover {
+    color: #007bff; /* Change color on hover */
 }

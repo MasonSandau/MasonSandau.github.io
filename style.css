@@ -26,6 +26,49 @@ body, html {
   color: #6ee7b7;
 }
 
+#sidebar {
+  position: fixed;
+  left: 20px;
+  top: 250px; /* Adjust based on your design */
+  width: 200px; /* Fixed width for sidebar */
+  background: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  padding: 15px;
+  border-radius: 10px; /* Rounded corners */
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  z-index: 5; /* Ensure it's above other content */
+  border-radius: 10px;
+
+}
+
+#section-index {
+  list-style-type: none; /* Remove bullet points */
+  padding: 5; /* Remove padding */
+  border-radius: 10px;
+
+}
+
+
+#section-index li {
+  padding: 10px; /* Add padding for each item */
+  cursor: pointer; /* Show pointer cursor */
+  transition: background 0.3s; /* Smooth background transition */
+  border-radius: 10px;
+
+}
+
+#section-index li:hover {
+    border-radius: 10px;
+
+  background: rgba (0, 0, 0, 0.5); /* Darken background on hover */
+}
+
+#section-index li.active {
+  background: rgba(110, 231, 183, 0.5); /* Highlight active section */
+  color: #000; /* Change text color for better contrast */
+  border-radius: 10px;
+
+}
+
 .content-section {
   min-height: 200vh;
   display: flex;
@@ -62,8 +105,6 @@ body, html {
   max-width: 80%;
   margin: 0 auto;
 }
-
-
 
 .section-content {
   opacity: 1;

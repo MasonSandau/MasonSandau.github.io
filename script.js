@@ -1,4 +1,3 @@
-const baseUrl = "mywebsite.com/";
 const sections = document.querySelectorAll(".content-section");
 const dynamicPart = document.getElementById("dynamic-part");
 let currentSection = null; // Initialize currentSection
@@ -10,76 +9,98 @@ window.addEventListener("scroll", () => {
     const rect = section.getBoundingClientRect();
     const visibleHeight = Math.max(0, Math.min(window.innerHeight, rect.bottom) - Math.max(0, rect.top));
     
-    // Calculate visibility percentage
     const visibilityPercentage = visibleHeight / (rect.height > 0 ? rect.height : 1);
 
-    // Check if the section is more than 25% visible
     if (visibilityPercentage > 0.25) {
       foundSection = section;
     }
 
-    // Fade out content if scrolled past it
     if (rect.bottom < 50) {
       const content = section.querySelector(".section-content");
       content.classList.add("fade-out");
-      content.classList.remove("fade-in", "scrolled"); // Reset fade-in classes
+      content.classList.remove("fade-in", "scrolled");
     }
   });
 
-  // Update URL and content display logic
   if (foundSection && foundSection !== currentSection) {
-    // Fade out current section
     if (currentSection) {
       const currentContent = currentSection.querySelector(".section-content");
       currentContent.classList.add("fade-out");
-      currentContent.classList.remove("fade-in", "scrolled"); // Reset fade-in classes
+      currentContent.classList.remove("fade-in", "scrolled");
 
-      // Wait for fade-out to complete before fading in new content
       currentContent.addEventListener('transitionend', () => {
-        currentContent.classList.remove("fade-out"); // Optional: Remove fade-out class
+        currentContent.classList.remove("fade-out");
       }, { once: true });
+      
+      hideSubsections(currentSection.id); // Hide previous subsections
     }
 
     currentSection = foundSection;
     const sectionUrl = currentSection.getAttribute("data-url");
     updateUrlProgress(sectionUrl);
-
-    // Highlight the current section in the sidebar
     highlightCurrentSection(currentSection.id);
 
-    // Fade in new section content
     const newContent = currentSection.querySelector(".section-content");
     newContent.classList.remove("fade-out");
-    newContent.classList.add("fade-in", "scrolled"); // Trigger fade-in effect
+    newContent.classList.add("fade-in", "scrolled");
 
-    // Use a timeout to ensure fade-out completes before fade-in starts
     setTimeout(() => {
-      newContent.classList.add("visible"); // Make it visible
-      newContent.classList.remove("fade-in"); // Remove fade-in class
-    }, 300); // Match this duration with the CSS transition duration
+      newContent.classList.add("visible");
+      newContent.classList.remove("fade-in");
+    }, 300);
   } else if (currentSection) {
     const sectionUrl = currentSection.getAttribute("data-url");
     updateUrlProgress(sectionUrl);
   }
 });
 
-// Function to highlight the current section in the sidebar
 function highlightCurrentSection(sectionId) {
   const sectionIndexItems = document.querySelectorAll('#section-index li');
   sectionIndexItems.forEach(item => {
     item.classList.remove('active');
-    if (item.getAttribute('data-target') === sectionId) {
+    const targetId = item.getAttribute('data-target');
+    const subsectionList = document.querySelector(`#${targetId}-subsections`);
+
+    if (targetId === sectionId) {
       item.classList.add('active');
+      if (subsectionList) {
+        subsectionList.style.display = 'block'; // Show subsections
+      }
+    } else {
+      if (subsectionList) {
+        subsectionList.style.display = 'none'; // Hide subsections
+      }
     }
   });
 }
 
-// Smooth scrolling to sections when clicking on sidebar items
+function hideSubsections(sectionId) {
+  const subsectionList = document.querySelector(`#${sectionId}-subsections`);
+  if (subsectionList) {
+    subsectionList.style.display = 'none'; // Hide subsections for the previous section
+  }
+}
+
+// Add click event listeners to sidebar items
 document.querySelectorAll('#section-index li').forEach(item => {
-  item.addEventListener('click', function() {
-    const targetId = this.getAttribute('data-target');
+  item.addEventListener('click', () => {
+    const targetId = item.getAttribute('data-target');
     const targetSection = document.getElementById(targetId);
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// Add click event listeners to subsection items
+document.querySelectorAll('.subsection-list li').forEach(item => {
+  item.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent triggering the main section click
+    const targetId = item.getAttribute('data-target');
+    const targetSubsection = document.getElementById(targetId);
+    if (targetSubsection) {
+      targetSubsection.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
 
@@ -105,3 +126,18 @@ function updateUrlProgress(urlPart) {
     dynamicPart.textContent = urlPart.substring(0, visibleCharsCount);
   }
 }
+
+// Scroll to the "About Me" section on page load
+window.onload = () => {
+  const aboutMeSection = document.getElementById("about-me"); // Ensure this ID matches your HTML
+  if (aboutMeSection) {
+    aboutMeSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+// Toggle dark/light theme on button click
+const themeToggleButton = document.getElementById('theme-toggle');
+
+themeToggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme'); // Toggle dark-theme class on body
+});

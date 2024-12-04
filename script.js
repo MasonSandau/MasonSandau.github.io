@@ -43,7 +43,10 @@ window.addEventListener("scroll", () => {
     currentSection = foundSection;
     const sectionUrl = currentSection.getAttribute("data-url");
     updateUrlProgress(sectionUrl);
-    
+
+    // Highlight the current section in the sidebar
+    highlightCurrentSection(currentSection.id);
+
     // Fade in new section content
     const newContent = currentSection.querySelector(".section-content");
     newContent.classList.remove("fade-out");
@@ -58,6 +61,26 @@ window.addEventListener("scroll", () => {
     const sectionUrl = currentSection.getAttribute("data-url");
     updateUrlProgress(sectionUrl);
   }
+});
+
+// Function to highlight the current section in the sidebar
+function highlightCurrentSection(sectionId) {
+  const sectionIndexItems = document.querySelectorAll('#section-index li');
+  sectionIndexItems.forEach(item => {
+    item.classList.remove('active');
+    if (item.getAttribute('data-target') === sectionId) {
+      item.classList.add('active');
+    }
+  });
+}
+
+// Smooth scrolling to sections when clicking on sidebar items
+document.querySelectorAll('#section-index li').forEach(item => {
+  item.addEventListener('click', function() {
+    const targetId = this.getAttribute('data-target');
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
 });
 
 function updateUrlProgress(urlPart) {

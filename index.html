@@ -6,52 +6,195 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<button id="theme-toggle" class="theme-toggle">Toggle Theme</button>
 <body>
   <div id="fixed-url">
-    <span id="base-url">mywebsite.com/</span>
+      
+    <span id="base-url">MasonSandau.github.io/</span>
     <span id="dynamic-part"></span>
   </div>
+  
+  
 
   <div id="sidebar">
     <ul id="section-index">
       <li data-target="aboutme">About Me</li>
+      <ul class="subsection-list" id="aboutme-subsections">
+        <li data-target="school">School</li>
+        <li data-target="experience">Sxperience</li>
+        <li data-target="interests">Intrests</li>
+      </ul>
+      
+      
       <li data-target="projects">Projects</li>
+      <ul class="subsection-list" id="projects-subsections">
+        <li data-target="project1">Python obfuscator</li>
+        <li data-target="project2">Junk code generator</li>
+        <li data-target="project3">Whitelist</li>
+      </ul>
+      
+      <li data-target="UndocumentedProjects">Undocumented Projects</li>
+      <ul class="subsection-list" id="UndocumentedProjects-subsections">
+        <li data-target="project1-1">CSGO AA Extension</li>
+        <li data-target="project1-2">ClientSide AntiCheat</li>
+        <li data-target="project1-3">Shinjuku 2006 Script</li>
+      </ul>
+      
+      
+      <li data-target="ReverseEngineering">Reverse engineering</li>
+      <ul class="subsection-list" id="ReverseEngineering-subsections">
+        <li data-target="project2-1">TwitterAIO Reversal</li>
+        <li data-target="project2-2">Github Malware Analysis</li>
+        <li data-target="project2-3">CrackMe Challenges</li>
+      </ul>
+      
       <li data-target="contact">Contact</li>
     </ul>
   </div>
+  
+  
 
   <div id="content">
-    <section id="aboutme" class="content-section" data-url="aboutme">
+      <section id="aboutme" class="content-section" data-url="aboutme">
+        <div class="section-header">
+          <span class="completed-url">MasonSandau.github.io/aboutme</span>
+        </div>
+        <div class="section-content">
+          <!-- Subsections in Text Boxes -->
+          <div class="subsection-box" id="school" data-url="projects/school">
+              <h3><strong>Schooling</strong></h3>
+              <p><strong>Sophomore | Computer Science Student</strong><br /><em>University of Minnesota Duluth</em><br /><strong>Minor</strong>: Mathematics</p>
+              <ul>
+              <li>Pursuing a Bachelor&rsquo;s in Computer Science with a focus on algorithms, data structures, and systems programming.</li>
+              </ul>
+          </div>
+          
+          
+          
+          <div class="subsection-box" id="experience" data-url="projects/experience">
+              <h3><strong>Experience</strong></h3>
+              <h4><strong>Languages &amp; Skills</strong></h4>
+              <ul>
+              <li><strong>Proficient</strong>: Python (8 years), Lua (6 years), C++/C/C# (5 years)</li>
+              <li><strong>Intermediate</strong>: .NET (2 years), JavaScript (2 years), x86 Assembly (2 years)</li>
+              <li><strong>Beginner</strong>: HTML/CSS (1 year each)</li>
+              </ul>
+              <h4><strong>Tools &amp; Frameworks</strong></h4>
+              <ul>
+              <li>
+              <p><strong>Development Environments</strong>:<br />CLion, IntelliJ IDEA, Visual Studio (Code/Community), XCode, Python IDLE</p>
+              </li>
+              <li>
+              <p><strong>Reverse Engineering Tools</strong>:<br />IDA Pro, Cutter.re, Cheat Engine (custom driver extension), x86dbg, HxD</p>
+              </li>
+              </ul>
+          </div>
+
+          <div class="subsection-box" id="intrests" data-url="projects/intrests">
+              <div class="flex-shrink-0 flex flex-col relative items-end">
+              <div class="flex-shrink-0 flex flex-col relative items-end">
+              <h3><strong>Interests</strong></h3>
+              <ul>
+              <li><strong>Cryptology</strong>: Passion for encryption, cryptology, and security.</li>
+              <li><strong>Reverse Engineering</strong>: Focus on reverse engineering, malware analysis, and low level windows internals.</li>
+              </ul>
+              </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+    
+    
+    <section id="projects" class="content-section" data-url="projects">
       <div class="section-header">
-        <span class="completed-url">mywebsite.com/aboutme</span>
+        <span class="completed-url">MasonSandau.github.io/projects</span>
       </div>
       <div class="section-content">
-          <h3><strong>Mason Sandau</strong></h3>
-          <p><strong>Sophomore | Computer Science Student | University of Minnesota Duluth</strong><strong><br /></strong><em><span style="font-weight: 400;">Minor: Mathematics | Interests: Cryptology, Reverse Engineering</span></em></p>
+        <!-- Subsections in Text Boxes -->
+        <div class="subsection-box" id="project1" data-url="projects/PythonObfuscator">
+            <h4><strong>Python Obfuscator</strong></h4>
+            <h3><span style="font-weight: 400;">A multi-layered obfuscation tool for Python scripts, incorporating features like Base64 encryption, marshalling, pickle loads, anti-VM checks, hash modification verification, and more.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python | Pickle, Marshall, Windows Registry, Web Requests, RSA Encryption</span></h3>
+        </div>
+        
+        
+        
+        <div class="subsection-box" id="project2" data-url="projects/PythonJunkCodeGenerator">
+            <h4><strong>Python Junk Code Generator</strong></h4>
+            <p><span style="font-weight: 400;">Designed for signature evasion and webflow obfuscation, this tool generates junk code with non-English ASCII-supported Unicode, fake socket requests, and dummy string manipulations.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python | ASCII, WebSockets</span></p>
+        </div>
+
+        <div class="subsection-box" id="project3" data-url="projects/List">
+            <h4><strong>Custom Whitelist CSV Manager</strong></h4>
+            <h4><span style="font-weight: 400;">A Flask-based application to manage name whitelists stored in a CSV database. Features include user-limited name submissions (up to 3) and an admin panel for viewing submissions, dates, and associated metadata.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python Flask, HTML, CSS | GET/POST Requests, Flask Templates</span></h4>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="content-section" data-url="projects">
+    
+    <section id="UndocumentedProjects" class="content-section" data-url="UndocumentedProjects">
       <div class="section-header">
-        <span class="completed-url">mywebsite.com/projects</span>
+        <span class="completed-url">MasonSandau.github.io/UndocumentedProjects</span>
       </div>
+      
       <div class="section-content">
-        <h1>Projects</h1>
-        <ul>
-          <li>Space Weather Data Management System</li>
-          <li>Custom Kernel Driver</li>
-          <li>Flask Admin Panel</li>
-        </ul>
+        <!-- Subsections in Text Boxes -->
+        <div class="subsection-box" id="project1-1" data-url="UndocumentedProjects/CSGOAA">
+            <h4><strong>CSGO Anti-Aim Extension</strong></h4>
+            <p><span style="font-weight: 400;">Developed an in-game player model desync mechanism for hitbox manipulation, along with custom visual debugging tools for angle and movement data.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Internal CSGO Module API, Nixware.cc API</span></p>
+        </div>
+        
+        
+        
+        <div class="subsection-box" id="project1-2" data-url="UndocumentedProjects/CSAC">
+            <h4><strong>Roblox Client-Side Anti-Cheat</strong></h4>
+            <h4><span style="font-weight: 400;">Extension to detect unauthorized model modifications and part additions to characters in Roblox games.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Roblox API, SynapseX API</span></h4>
+        </div>
+        
+        
+        
+        <div class="subsection-box" id="project1-3" data-url="projects/Shinjuku">
+            <h4><strong>Shinjuku 2006 Script</strong></h4>
+            <h4><span style="font-weight: 400;">A Roblox debugging tool displaying item spawn counts, player group affiliations, and other game data for strategic advantage.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Roblox API, SynapseX API</span></h4>
+        </div>
       </div>
     </section>
     
     
+    
+    <section id="ReverseEngineering" class="content-section" data-url="ReverseEgnineering">
+      <div class="section-header">
+        <span class="completed-url">MasonSandau.github.io/ReverseEgnineering</span>
+      </div>
+      
+      <div class="section-content">
+        <!-- Subsections in Text Boxes -->
+        <div class="subsection-box" id="project2-1" data-url="ReverseEgnineering/TwitterAIO">
+            <h4><strong>TwitterAIO Reversal</strong></h4>
+            <p><span style="font-weight: 400;">Hand-reversed a heavily obfuscated executable back to its Python bytecode origins and reconstructed its original functionality.</span></p>
+        </div>
+        
+        
+        
+        <div class="subsection-box" id="project2-2" data-url="UndocumentedProjects/GitHubMalware">
+            <h4><strong>Github Malware Analysis</strong></h4>
+            <p><span style="font-weight: 400;">Decompiled a GitHub release-only executable claiming to be a Discord self-bot. Discovered and documented its embedded credential-stealing malware.</span></p>
+        </div>
+        
+        
+        
+        <div class="subsection-box" id="project2-3" data-url="projects/CrackMe's">
+            <h4><strong>CrackMe Challenges</strong></h4>
+            <h4><span style="font-weight: 400;">Completed multiple CrackMe challenges of varying difficulty across platforms, including .NET and native C++ applications. Portfolio available at</span><a href="https://crackmes.one"> <span style="font-weight: 400;">crackmes.one</span></a><span style="font-weight: 400;">.</span></h4>
+        </div>
+      </div>
+    </section>
     
     
 
     <section id="contact" class="content-section" data-url="contact">
       <div class="section-header">
-        <span class="completed-url">mywebsite.com/contact</span>
+        <span class="completed-url">MasonSandau.github.io/contact</span>
       </div>
       <div class="section-content">
         <h1>Contact</h1>

@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <div class="Short-abt-me">
+        <h3>Hello! I'm <strong>Mason Sandau</strong> Bachalors in CS student </h3>
+  </div>
+      
   <div class="social-icons">
       <a href="https://github.com/MasonSandau" target="_blank" class="icon"><i class="fab fa-github"></i></a>
       <a href="mailto:MasonSandau@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
@@ -14,7 +20,7 @@
   <link rel="stylesheet" href="style.css">
       
 </head>
-<button id="theme-toggle" class="theme-toggle">Toggle Theme</button>
+<button id="theme-toggle" class="theme-toggle">Change Theme</button>
 <body>
   <div id="fixed-url">
       
@@ -69,33 +75,72 @@
         <div class="section-content">
           <!-- Subsections in Text Boxes -->
           <div class="subsection-box" id="school" data-url="projects/school">
-              <h3><strong>Schooling</strong></h3>
-              <p><strong>Sophomore | Computer Science Student</strong><br /><em>University of Minnesota Duluth</em><br /><strong>Minor</strong>: Mathematics</p>
+              <h3><strong>Degree</strong></h3>
+              
+              <p>
+                  <strong>Bachelor in Computer Science</strong><br>
+                  <strong>Minor:</strong> Mathematics<br>
+                  <em>University of Minnesota Duluth</em><br>
+                  <strong>Expected Graduation:</strong> 2027
+                </p>
+              
               <ul>
-              <li>Pursuing a Bachelor&rsquo;s in Computer Science with a focus on algorithms, data structures, and systems programming.</li>
+              <li>Pursuing a Bachelor&rsquo;s in Computer Science with a focus on cryptology, software security, and low level hardware to software interactions.</li>
               </ul>
           </div>
           
           
           
           <div class="subsection-box" id="experience" data-url="projects/experience">
-              <h3><strong>Experience</strong></h3>
-              <h4><strong>Languages &amp; Skills</strong></h4>
-              <ul>
-              <li><strong>Proficient</strong>: Python (8 years), Lua (6 years), C++/C/C# (5 years)</li>
-              <li><strong>Intermediate</strong>: .NET (2 years), JavaScript (2 years), x86 Assembly (2 years)</li>
-              <li><strong>Beginner</strong>: HTML/CSS (1 year each)</li>
-              </ul>
-              <h4><strong>Tools &amp; Frameworks</strong></h4>
-              <ul>
+            <h3><strong>Experience</strong></h3>
+
+            <h4><strong>Languages &amp; Skills</strong></h4>
+            <ul>
               <li>
-              <p><strong>Development Environments</strong>:<br />CLion, IntelliJ IDEA, Visual Studio (Code/Community), XCode, Python IDLE</p>
+                <strong>Proficient</strong>:
+                <i class="devicon-python-plain colored"></i> Python (8 years),
+                <i class="devicon-lua-plain colored"></i> Lua (6 years),
+                <i class="devicon-cplusplus-plain colored"></i> C++/C/C# (5 years),
               </li>
               <li>
-              <p><strong>Reverse Engineering Tools</strong>:<br />IDA Pro, Cutter.re, Cheat Engine (custom driver extension), x86dbg, HxD</p>
+                <strong>Intermediate</strong>:
+                <i class="devicon-dotnetcore-plain colored"></i> .NET (2 years),
+                <i class="devicon-javascript-plain colored"></i> JavaScript (2 years),
+                <i class="devicon-wasm-original colored"></i>x86 Assembly (2 years),
+
               </li>
-              </ul>
+              <li>
+                <strong>Beginner</strong>:
+                <i class="devicon-html5-plain colored"></i> HTML (1 year),
+                <i class="devicon-css3-plain colored"></i> CSS (1 year)
+                
+              </li>
+            </ul>
+
+            <h4><strong>Tools &amp; Frameworks</strong></h4>
+            <ul>
+              <li>
+                <p><strong>Development Environments</strong>:<br />
+                  <i class="devicon-clion-plain colored"></i> CLion,
+                  <i class="devicon-intellij-plain colored"></i> IntelliJ IDEA,
+                  <i class="devicon-visualstudio-plain colored"></i> Visual Studio (Code/Community),
+                  <i class="devicon-xcode-plain colored"></i> XCode,
+                  Python IDLE
+                </p>
+              </li>
+              <li>
+                <p><strong>Reverse Engineering Tools</strong>:<br />
+                  <i class="fa-solid fa-magnifying-glass"></i> IDA Pro,
+                  <i class="fa-solid fa-screwdriver-wrench"></i> Cutter.re,
+                  <i class="fa-solid fa-microchip"></i> Cheat Engine (custom driver extension),
+                  x86dbg,
+                  <i class="fa-solid fa-file-code"></i> HxD, ILSpy
+
+                </p>
+              </li>
+            </ul>
           </div>
+
 
           <div class="subsection-box" id="intrests" data-url="projects/intrests">
               <div class="flex-shrink-0 flex flex-col relative items-end">
@@ -103,7 +148,7 @@
               <h3><strong>Interests</strong></h3>
               <ul>
               <li><strong>Cryptology</strong>: Passion for encryption, cryptology, and security.</li>
-              <li><strong>Reverse Engineering</strong>: Focus on reverse engineering, malware analysis, and low level windows internals.</li>
+              <li><strong>Reverse Engineering</strong>: Focus on reverse engineering, malware analysis, and low level windows api.</li>
               </ul>
               </div>
               </div>
@@ -121,19 +166,19 @@
         <!-- Subsections in Text Boxes -->
         <div class="subsection-box" id="project1" data-url="projects/PythonObfuscator">
             <h4><strong>Python Obfuscator</strong></h4>
-            <h3><span style="font-weight: 400;">A multi-layered obfuscation tool for Python scripts, incorporating features like Base64 encryption, marshalling, pickle loads, anti-VM checks, hash modification verification, and more.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python | Pickle, Marshall, Windows Registry, Web Requests, RSA Encryption</span></h3>
+            <h3><span style="font-weight: 400;">A multi-layered obfuscator for python including base64 encryption, marshall loads, pickle loads, internal hash checks, modification checks, anti-vm, error code encryption, list obfuscation, 3rd party obfuscators.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python | Pickle/Marshal object serialization, Base64 encryption, Windows registry, Web requests, Hashing, RSA encryption/One way encryption.</span></h3>
         </div>
         
         
         
         <div class="subsection-box" id="project2" data-url="projects/PythonJunkCodeGenerator">
             <h4><strong>Python Junk Code Generator</strong></h4>
-            <p><span style="font-weight: 400;">Designed for signature evasion and webflow obfuscation, this tool generates junk code with non-English ASCII-supported Unicode, fake socket requests, and dummy string manipulations.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python | ASCII, WebSockets</span></p>
+            <p><span style="font-weight: 400;">A python junk code generator for signature evasion and webflow obfuscation, along with non-English ASCII-supported Unicode, fake socket requests, and dummy string manipulations.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python | ASCII, WebSockets</span></p>
         </div>
 
         <div class="subsection-box" id="project3" data-url="projects/List">
             <h4><strong>Custom Whitelist CSV Manager</strong></h4>
-            <h4><span style="font-weight: 400;">A Flask-based application to manage name whitelists stored in a CSV database. Features include user-limited name submissions (up to 3) and an admin panel for viewing submissions, dates, and associated metadata.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python Flask, HTML, CSS | GET/POST Requests, Flask Templates</span></h4>
+            <h4><span style="font-weight: 400;">A Flask-based application to manage name whitelists stored in a CSV database. With functionality of user-limited name submissions (up to 3) and an admin panel for viewing submissions, dates, and other person specific data.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Python Flask, HTML, CSS | GET/POST Requests, Flask Templates, Cookies</span></h4>
         </div>
       </div>
     </section>
@@ -148,21 +193,21 @@
         <!-- Subsections in Text Boxes -->
         <div class="subsection-box" id="project1-1" data-url="UndocumentedProjects/CSGOAA">
             <h4><strong>CSGO Anti-Aim Extension</strong></h4>
-            <p><span style="font-weight: 400;">Developed an in-game player model desync mechanism for hitbox manipulation, along with custom visual debugging tools for angle and movement data.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Internal CSGO Module API, Nixware.cc API</span></p>
+            <p><span style="font-weight: 400;">An in-game player model desync mechanism for hitbox manipulation, along with custom visual debugging tools for angle and movement data.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Internal CSGO DLL Module API, Nixware.cc API</span></p>
         </div>
         
         
         
         <div class="subsection-box" id="project1-2" data-url="UndocumentedProjects/CSAC">
             <h4><strong>Roblox Client-Side Anti-Cheat</strong></h4>
-            <h4><span style="font-weight: 400;">Extension to detect unauthorized model modifications and part additions to characters in Roblox games.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Roblox API, SynapseX API</span></h4>
+            <h4><span style="font-weight: 400;">An extension to detect unauthorized model modifications and part additions to characters in Roblox games.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Roblox API, SynapseX API</span></h4>
         </div>
         
         
         
         <div class="subsection-box" id="project1-3" data-url="projects/Shinjuku">
             <h4><strong>Shinjuku 2006 Script</strong></h4>
-            <h4><span style="font-weight: 400;">A Roblox debugging tool displaying item spawn counts, player group affiliations, and other game data for strategic advantage.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Roblox API, SynapseX API</span></h4>
+            <h4><span style="font-weight: 400;">A Roblox debugging tool displaying item spawn counts, player group affiliations, and other game data.</span><span style="font-weight: 400;"><br /></span><strong>Languages/Tools:</strong><span style="font-weight: 400;"> Lua | Roblox API, SynapseX API</span></h4>
         </div>
       </div>
     </section>
@@ -178,21 +223,21 @@
         <!-- Subsections in Text Boxes -->
         <div class="subsection-box" id="project2-1" data-url="ReverseEgnineering/TwitterAIO">
             <h4><strong>TwitterAIO Reversal</strong></h4>
-            <p><span style="font-weight: 400;">Hand-reversed a heavily obfuscated executable back to its Python bytecode origins and reconstructed its original functionality.</span></p>
+            <p><span style="font-weight: 400;">Reverse-engineered an executable originally developed in Python, which had been obfuscated through multiple layers of undocumented tools. Successfully deconstructed the executable to its base Python bytecode through manual analysis and rebuilt the original functionality.</span></p>
         </div>
         
         
         
         <div class="subsection-box" id="project2-2" data-url="UndocumentedProjects/GitHubMalware">
             <h4><strong>Github Malware Analysis</strong></h4>
-            <p><span style="font-weight: 400;">Decompiled a GitHub release-only executable claiming to be a Discord self-bot. Discovered and documented its embedded credential-stealing malware.</span></p>
+            <p><span style="font-weight: 400;">Decompiled a GitHub release-only executable claiming to be a Discord self-bot. Discovered and documented its embedded credential-stealing malware then reporting it to github.</span></p>
         </div>
         
         
         
         <div class="subsection-box" id="project2-3" data-url="projects/CrackMe's">
             <h4><strong>CrackMe Challenges</strong></h4>
-            <h4><span style="font-weight: 400;">Completed multiple CrackMe challenges of varying difficulty across platforms, including .NET and native C++ applications. Portfolio available at</span><a href="https://crackmes.one"> <span style="font-weight: 400;">crackmes.one</span></a><span style="font-weight: 400;">.</span></h4>
+            <h4><span style="font-weight: 400;">Completed multiple CrackMe challenges of varying difficulty across platforms, including .NET and native C++ applications on crackcmes.one </a><span style="font-weight: 400;"></span></h4>
         </div>
       </div>
     </section>

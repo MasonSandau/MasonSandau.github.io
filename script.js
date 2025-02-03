@@ -26,6 +26,7 @@ const sections = {
         <ul>
           <li><strong>Development Environments:</strong> CLion, IntelliJ IDEA, Visual Studio, XCode, Python IDLE</li>
           <li><strong>Reverse Engineering Tools:</strong> IDA Pro, Cutter.re, Cheat Engine, x86dbg, HxD, ILSpy</li>
+          <li><strong>Windows undocumented api:</strong> internal api (ntoskrnl, win32...) via pointer swaps and method hijacking</li>
         </ul>
       `,
     },
@@ -35,17 +36,19 @@ const sections = {
         <ul>
           <li><strong>Cryptology:</strong> Passion for encryption, cryptology, and security.</li>
           <li><strong>Reverse Engineering:</strong> Focus on reverse engineering, malware analysis, and low-level Windows API.</li>
+          <li><strong>Unique :</strong> Focus on reverse engineering, malware analysis, and low-level Windows API.</li>
         </ul>
       `,
     },
   ],
-  projects: [
+projects: [
     {
       title: "Python Obfuscator",
       content: `
         <p>A multi-layered obfuscator for Python including base64 encryption, marshall loads, pickle loads, internal hash checks, modification checks, anti-VM, error code encryption, list obfuscation, and 3rd-party obfuscators.</p>
         <p><strong>Languages/Tools:</strong> Python | Pickle/Marshal object serialization, Base64 encryption, Windows registry, Web requests, Hashing, RSA encryption/One-way encryption.</p>
       `,
+      githubLink: "https://github.com/MasonSandau/python-obfuscator", // Add GitHub link
     },
     {
       title: "Python Junk Code Generator",
@@ -53,13 +56,16 @@ const sections = {
         <p>A Python junk code generator for signature evasion and webflow obfuscation, along with non-English ASCII-supported Unicode, fake socket requests, and dummy string manipulations.</p>
         <p><strong>Languages/Tools:</strong> Python | ASCII, WebSockets</p>
       `,
+      githubLink: "https://github.com/MasonSandau/python-junkcode-generator", // Add GitHub link
     },
     {
-      title: "Custom Whitelist CSV Manager",
+      title: "QuickEvent",
       content: `
-        <p>A Flask-based application to manage name whitelists stored in a CSV database. Includes functionality for user-limited name submissions (up to 3) and an admin panel for viewing submissions, dates, and other person-specific data.</p>
-        <p><strong>Languages/Tools:</strong> Python Flask, HTML, CSS | GET/POST Requests, Flask Templates, Cookies</p>
+        <p>QuickEvent is a event managment tool that simplifies event managment to 4 roles and easy access to everything. It serves as an event management system where users can register, log in, create events, manage attendees, and generate QR codes for attendee validation. Admins can access everything and create tokens for registration, actives can create invites and invite people along with check qr codes at the door for validation, and attendees can generate their own qr code based on an invite.</p>
+        <p><strong>Languages/Tools:</strong> Python Flask, HTML, CSS, JavaScript, NeonDB, deployment enviornments | GET/POST Requests, Flask Templates, Cookies, Sessions, NeonDB, Vercel hosting, github posting/version control, Styling</p>
       `,
+      mainPageLink: "https://QuickEvent.vercel.app/", // Add main page link
+      githubLink: "https://github.com/MasonSandau/List", // Add GitHub link
     },
   ],
   undocumentedProjects: [
@@ -116,6 +122,12 @@ function generateCards(sectionId, data) {
       <div class="card">
         <h3>${item.title}</h3>
         <div>${item.content}</div>
+        ${item.mainPageLink || item.githubLink ? `
+          <div class="project-links">
+            ${item.mainPageLink ? `<a href="${item.mainPageLink}" target="_blank">Main Page</a>` : ''}
+            ${item.githubLink ? `<a href="${item.githubLink}" target="_blank">GitHub</a>` : ''}
+          </div>
+        ` : ''}
       </div>
     `
     )

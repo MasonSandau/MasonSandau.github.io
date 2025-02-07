@@ -9,7 +9,7 @@ const sections = {
         <em>University of Minnesota Duluth</em><br>
         <strong>Expected Graduation:</strong> 2027</p>
         <ul>
-          <li>Pursuing a Bachelor’s in Computer Science with a focus on cryptology, software security, and low-level hardware-to-software interactions.</li>
+          <li>Pursuing a Bachelor’s in Computer Science with a focus on cryptology, software security, obfuscation, and low-level hardware-to-software interactions.</li>
         </ul>
       `,
     },
@@ -26,7 +26,7 @@ const sections = {
         <ul>
           <li><strong>Development Environments:</strong> CLion, IntelliJ IDEA, Visual Studio, XCode, Python IDLE</li>
           <li><strong>Reverse Engineering Tools:</strong> IDA Pro, Cutter.re, Cheat Engine, x86dbg, HxD, ILSpy</li>
-          <li><strong>Windows undocumented api:</strong> internal api (ntoskrnl, win32...) via pointer swaps and method hijacking</li>
+          <li><strong>Windows undocumented api:</strong> Internal api (ntoskrnl, win32...) via pointer swaps and function hijacking</li>
         </ul>
       `,
     },
@@ -36,12 +36,21 @@ const sections = {
         <ul>
           <li><strong>Cryptology:</strong> Passion for encryption, cryptology, and security.</li>
           <li><strong>Reverse Engineering:</strong> Focus on reverse engineering, malware analysis, and low-level Windows API.</li>
-          <li><strong>Unique :</strong> Focus on reverse engineering, malware analysis, and low-level Windows API.</li>
+          <li><strong>Solutions:</strong> Multiple unique solutions to real world problems and use cases for those applications.</li>
         </ul>
       `,
     },
   ],
 projects: [
+    {
+      title: "QuickEvent",
+      content: `
+        <p>QuickEvent is an event management tool that streamlines event organization into four roles: Admins, who oversee all functions and create registration tokens; Actives, who manage invites, QR code validation, and attendee check-ins; and Attendees, who generate their own QR codes from invites. The platform enables user registration, event creation, attendee management, and QR code generation for seamless event access and validation.</p>
+        <p><strong>Languages/Tools:</strong> Python Flask, HTML, CSS, JavaScript, NeonDB, deployment enviornments | GET/POST Requests, Flask Templates, Cookies, Sessions, NeonDB, Vercel hosting, github posting/version control, Styling</p>
+      `,
+      mainPageLink: "https://QuickEvent.vercel.app/", // Add main page link
+      githubLink: "https://github.com/MasonSandau/List", // Add GitHub link
+    },
     {
       title: "Python Obfuscator",
       content: `
@@ -57,15 +66,6 @@ projects: [
         <p><strong>Languages/Tools:</strong> Python | ASCII, WebSockets</p>
       `,
       githubLink: "https://github.com/MasonSandau/python-junkcode-generator", // Add GitHub link
-    },
-    {
-      title: "QuickEvent",
-      content: `
-        <p>QuickEvent is a event managment tool that simplifies event managment to 4 roles and easy access to everything. It serves as an event management system where users can register, log in, create events, manage attendees, and generate QR codes for attendee validation. Admins can access everything and create tokens for registration, actives can create invites and invite people along with check qr codes at the door for validation, and attendees can generate their own qr code based on an invite.</p>
-        <p><strong>Languages/Tools:</strong> Python Flask, HTML, CSS, JavaScript, NeonDB, deployment enviornments | GET/POST Requests, Flask Templates, Cookies, Sessions, NeonDB, Vercel hosting, github posting/version control, Styling</p>
-      `,
-      mainPageLink: "https://QuickEvent.vercel.app/", // Add main page link
-      githubLink: "https://github.com/MasonSandau/List", // Add GitHub link
     },
   ],
   undocumentedProjects: [

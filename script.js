@@ -19,7 +19,7 @@ const sections = {
         <h4><strong>Languages & Skills</strong></h4>
         <ul>
           <li><strong>Proficient:</strong> Python, Lua, C++/C/C#</li>
-          <li><strong>Intermediate:</strong> .NET, JavaScript, x86 Assembly</li>
+          <li><strong>Intermediate:</strong> .NET, JavaScript/Java, x86 Assembly, SQL</li>
           <li><strong>Beginner:</strong> HTML, CSS</li>
         </ul>
         <h4><strong>Tools & Frameworks</strong></h4>
@@ -36,7 +36,7 @@ const sections = {
         <ul>
           <li><strong>Cryptology:</strong> Passion for encryption, cryptology, and security.</li>
           <li><strong>Reverse Engineering:</strong> Focus on reverse engineering, malware analysis, and low-level Windows API.</li>
-          <li><strong>Solutions:</strong> Multiple unique solutions to real world problems and use cases for those applications.</li>
+          <li><strong>Security:</strong> Interest in exploring security practices, designing custom solutions, and ensuring software integrity.</li>
         </ul>
       `,
     },

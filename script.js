@@ -18,15 +18,15 @@ const sections = {
       content: `
         <h4><strong>Languages & Skills</strong></h4>
         <ul>
-          <li><strong>Proficient:</strong> Python, Lua, C++/C/C#</li>
-          <li><strong>Intermediate:</strong> .NET, JavaScript/Java, x86 Assembly, SQL</li>
-          <li><strong>Beginner:</strong> HTML, CSS</li>
+          <li><strong>Proficient:</strong> Python, Lua, C++/C, x86 assembly</li>
+          <li><strong>Intermediate:</strong> .NET, JavaScript/Java, SQL, Flutter, Dart, HTML</li>
+          <li><strong>Beginner:</strong> CSS, Node.JS, React.JS</li>
         </ul>
         <h4><strong>Tools & Frameworks</strong></h4>
         <ul>
           <li><strong>Development Environments:</strong> CLion, IntelliJ IDEA, Visual Studio, XCode, Python IDLE</li>
-          <li><strong>Reverse Engineering Tools:</strong> IDA Pro, Cutter.re, Cheat Engine, x86dbg, HxD, ILSpy</li>
-          <li><strong>Windows undocumented api:</strong> Internal api (ntoskrnl, win32...) via pointer swaps and function hijacking</li>
+          <li><strong>Reverse Engineering Tools:</strong> IDA Pro, Cutter.re, Cheat Engine, x86dbg, HxD, ILSpy, Voyager</li>
+          <li><strong>AI:</strong> N8N agents, Github Copilot, PyTorch, Ollama</li>
         </ul>
       `,
     },
@@ -35,7 +35,7 @@ const sections = {
       content: `
         <ul>
           <li><strong>Cryptology:</strong> Passion for encryption, cryptology, and security.</li>
-          <li><strong>Reverse Engineering:</strong> Focus on reverse engineering, malware analysis, and low-level Windows API.</li>
+          <li><strong>Reverse Engineering:</strong> Focus on reverse engineering, malware analysis, and low-level kernel drivers.</li>
           <li><strong>Security:</strong> Interest in exploring security practices, designing custom solutions, and ensuring software integrity.</li>
         </ul>
       `,
@@ -67,15 +67,18 @@ projects: [
       `,
       githubLink: "https://github.com/MasonSandau/python-junkcode-generator", // Add GitHub link
     },
+    {
+        title: "CSGO Anti-Aim Extension",
+        content: `
+          <p>A real-time game modification for CS:GO for data manipulation. The program intercepts game engine callbacks to mathematically alter player angles and intelligently control network packet timing, creating unpredictable movement patterns. Built with a modular Lua architecture, it features a professional configuration UI, dynamic anti-prediction algorithms, and an event-driven rendering system. This project showcases advanced skills in real-time systems, algorithmic design, and software architecture applicable to security, networking, and high-frequency data processing roles.</p>
+          <p><strong>Languages/Tools:</strong> Lua | Internal CSGO DLL Module API, Nixware.cc API</p>
+        `,
+            githubLink: "https://github.com/MasonSandau/Legacy-Anti-Aim-lua", // Add GitHub link
+
+      },
   ],
   undocumentedProjects: [
-    {
-      title: "CSGO Anti-Aim Extension",
-      content: `
-        <p>An in-game player model desync mechanism for hitbox manipulation, along with custom visual debugging tools for angle and movement data.</p>
-        <p><strong>Languages/Tools:</strong> Lua | Internal CSGO DLL Module API, Nixware.cc API</p>
-      `,
-    },
+
     {
       title: "Roblox Client-Side Anti-Cheat",
       content: `

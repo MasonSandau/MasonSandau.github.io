@@ -20,7 +20,7 @@ const sections = {
         <ul>
           <li><strong>Proficient:</strong> Python, Lua, C++/C, x86 assembly</li>
           <li><strong>Intermediate:</strong> .NET, JavaScript/Java, SQL, Flutter, Dart, HTML</li>
-          <li><strong>Beginner:</strong> CSS, Node.JS, React.JS</li>
+          <li><strong>Beginner:</strong> CSS, Node.JS, React.JS, C#</li>
         </ul>
         <h4><strong>Tools & Frameworks</strong></h4>
         <ul>
